@@ -30,7 +30,23 @@ const showData=(data)=>{
                for(let i=0;i<arr.length;i++){
                    if(arr[i].type==="image/png"||arr[i].type==="image/jpeg"){
                     let cardCont= document.getElementById("cardsDivCont")
-                    
+                    let singleCard=document.createElement("div");
+                    singleCard.classList.add="singleCard";
+                    let cardImg=document.createElement("div");
+                    cardImg.classList.add="cardImg";
+                    let img=document.createElement("img");
+                    img.src=arr[i].link;
+                    cardImg.appendChild(img);
+                    let cardLikes=document.createElement("div");
+                    cardLikes.classList.add="cardLikes";
+                    let likesTitle=document.createElement("div")
+                    likesTitle.classList.add="likesTitle";
+                    let likesLogos=document.createElement("div");
+                    likesLogos.classList.add="likesLogos";
+                    cardLikes.append(likesTitle,likesLogos);
+                    singleCard.append(cardImg,cardLikes);
+
+                    cardCont.append(singleCard);
                     
                    }
                }
