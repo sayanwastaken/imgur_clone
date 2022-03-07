@@ -1,3 +1,28 @@
+async function ipData() {
+  let value = document.getElementById("searchInput").value;
+  let clientId = "141ad48a8c03765";
+  let NewHeader = new Headers();
+  NewHeader.append("Authorization", `Client-ID ${clientId}`);
+  let methodObj = {
+    method: "GET",
+    headers: NewHeader,
+    redirect: "follow",
+  };
+  //https://api.imgur.com/3/gallery/search/{${sort}}/{{window}}/page=1?q=${e}
+  let data = await fetch(
+    `https://api.imgur.com/3/gallery/search/top/top/page=1?q=${value}`,
+    methodObj
+  );
+  let res = await data.json();
+  
+
+    showData(res.data);
+}
+
+document.getElementById("search-btn").addEventListener("click", () => {
+  ipData();
+});
+
 const getData = async () => {
   let clientId = "141ad48a8c03765";
   let NewHeader = new Headers();
@@ -17,7 +42,6 @@ const getData = async () => {
   // console.log(res.data[0].images[0].gifv)
 
   showData(res.data);
-  let imgsArr = res.data;
 };
 getData();
 
@@ -41,11 +65,11 @@ const showData = (data) => {
             cardLikes.setAttribute("class", "cardLikes");
             let likesTitle = document.createElement("div");
             likesTitle.setAttribute("class", "likesTitle");
-            let h3= document.createElement("h5");
-            likesTitle.style.textAlign="center"
-            likesTitle.append(h3)
-            h3.innerText=elem.title
-            h3.style.marginTop="10px"
+            let h3 = document.createElement("h5");
+            likesTitle.style.textAlign = "center";
+            likesTitle.append(h3);
+            h3.innerText = elem.title;
+            h3.style.marginTop = "10px";
             let likesLogos = document.createElement("div");
             likesLogos.setAttribute("class", "likesLogos");
             cardLikes.append(likesTitle, likesLogos);
