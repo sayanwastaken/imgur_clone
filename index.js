@@ -31,18 +31,18 @@ const showData=(data)=>{
                    if(arr[i].type==="image/png"||arr[i].type==="image/jpeg"){
                     let cardCont= document.getElementById("cardsDivCont")
                     let singleCard=document.createElement("div");
-                    singleCard.classList.add="singleCard";
+                    singleCard.setAttribute=("class", "singleCard");
                     let cardImg=document.createElement("div");
-                    cardImg.classList.add="cardImg";
+                    cardImg.setAttribute=("class", "cardImg");
                     let img=document.createElement("img");
                     img.src=arr[i].link;
                     cardImg.appendChild(img);
                     let cardLikes=document.createElement("div");
-                    cardLikes.classList.add="cardLikes";
+                    cardLikes.setAttribute=("class", "cardLikes");
                     let likesTitle=document.createElement("div")
-                    likesTitle.classList.add="likesTitle";
+                    likesTitle.setAttribute=("class", "likesTitle");
                     let likesLogos=document.createElement("div");
-                    likesLogos.classList.add="likesLogos";
+                    likesLogos.setAttribute=("class", "likesLogos");
                     cardLikes.append(likesTitle,likesLogos);
                     singleCard.append(cardImg,cardLikes);
 
