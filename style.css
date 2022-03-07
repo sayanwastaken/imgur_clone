@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Roboto&family=Work+Sans:wght@300&display=swap');
+
+:root{
+    --greenColor:rgb(27,183,110);
+    --violetColor:rgb(23,21,68);
+    --deepGray:rgb(46,48,53);
+    --deepViolet:rgb(100,50,249);
+    --fontBlue:#AED8EA;
+    
+}
+
+
+*,*::before,*::after{
+    margin: 0%;
+    /* padding: 0; */
+    box-sizing:border-box;
+    font-family: 'Fredoka', sans-serif;
+    
+}
+body{
+    background-color: var(--deepGray);
+    color:white;
+}
+.upper {
+    height: 450px;
+    color:white;
+    background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png");
+}
+.navDiv1{
+    width: 100%;
+    height: 70px;
+    display:flex;
+    justify-content:space-between;
+}
+.navDiv1>div{
+    height: 100%;
+}
+.nav1Left{
+    width: 20%;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.nav1Left>div{
+    height: 35px;
+    margin-left:5px;
+    cursor:pointer;
+}
+
+.newPostDiv{
+    background-color:var(--greenColor);
+    margin-right:20px;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius:3px;
+    font-weight: bold;
+    height: 35px;
+    padding-top: 5px;
+    margin-bottom:2px;
+}
+.nav1Middle{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav1Search{
+    width: 90%;
+    height: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#454469;
+    border-radius: 5px;
+    padding:10px;
+}
+.nav1Search>input{
+    outline: 0;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    border:transparent;
+    background-color:#454469;
+    height:100%;
+    width: 90%;
+}
+
+
+.nav1Right{
+    width: 30%;
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+.nav1Right>div{
+    cursor:pointer;
+}
+.nav1Right>div:nth-child(2){
+    width: 25%;
+    background-color: var(--deepViolet);
+    padding:1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    border-radius:3px;
+    height:35px;
+
+}
+.nav1Right>div:nth-child(3){
+    width: 20%;
+    padding:1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    border-radius:3px;
+    height:35px;
+
+}
+.nav1Right>div:nth-child(4){
+    width: 20%;
+    background-color: var(--greenColor);
+    padding:1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    border-radius:3px;
+    height:35px;
+
+}
+.upperH1{
+   margin-left: 20%;
+   margin-top:1.5%;
+   color:var(--fontBlue)
+}
+
+.upperContent{
+    height: 70%;
+    
+}
+.upperContent>div:nth-child(1){
+    width: 85%;
+    height: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:auto;
+}
+.upperContent>div:nth-child(2){
+    width: 85%;
+    margin:auto;
+    height: 84%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.upperContent>div:nth-child(2)>div{
+    width: 10%;
+    height: 60%;
+    cursor: pointer;
+}
+
+.upperContent>div:nth-child(2)>div:nth-child(1){
+    width: 20%;
+    height: 60%;
+    display:flex;
+    flex-direction:column;
+    border-radius:5px 0px;
+}
+.upperContent>div:nth-child(2)>div>div{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    font-size:16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.upperContent>div:nth-child(2)>div>div>img{
+    width: 100%;
+    height: 100%;
+}
+
+.upperContent>div:nth-child(2)>div:nth-child(1)>div{
+    width: 100%;
+    height: 50%;
+    
+}
+
+.cardsSection{
+    height: 100%;
+}
+
+.sortDiv{
+    margin: auto;
+    width: 80%;
+    height: 60px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.sortLeft{
+    width: 20%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.sortRight{
+    width: 20%;
+    display:flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+.sortLeft>select{
+    color: white;
+    outline: 0;
+    border:0;
+    background-color:var(--deepGray);
+    width: 300px;
+    font-size: large;
+    font-weight: bold;
+    padding-left: 100px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.sortRight>select{
+    color: white;
+    outline: 0;
+    border:0;
+    background-color:var(--deepGray);
+    width: 95px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sortLogos{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    gap: 20px;
+}
+
+.cardsDiv{
+    width: 80%;
+    height: 100%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    justify-content:center;
+    gap:10px;
+}
+.cardsDiv>div{
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg, rgb(134, 42, 209) , rgb(35, 132, 211));
+    border-image-slice: 1;
+    height: 250px;
+}
+.cardImg{
+    border: 1px solid white;
+    height: 70%;
+    width: 100%;
+}
+.cardImg>img{
+    width: 100%;
+    height: 100%;
+}
+.cardLikes{
+    border: 1px solid white;
+    height: 30%;
+    width: 100%;
+}
