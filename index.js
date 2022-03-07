@@ -39,12 +39,15 @@ const getData = async () => {
   );
   let res = await data.json();
   // console.log(res.data[0].images[0].gifv)
+  
 
   showData(res.data);
 };
 getData();
 
 const showData = (data) => {
+    let cardCont = document.getElementById("cardsDivCont");
+  cardCont.innerHTML = "";
   data.map((elem) => {
     if (elem.images) {
       if (elem.images.length >= 0) {
@@ -53,7 +56,6 @@ const showData = (data) => {
         for (let i = 0; i < arr.length; i++) {
           if (arr[i].type === "image/png" || arr[i].type === "image/jpeg") {
             let cardCont = document.getElementById("cardsDivCont");
-            cardCont.innerHTML = null;
             let singleCard = document.createElement("div");
             singleCard.setAttribute("class", "singleCard");
             let cardImg = document.createElement("div");
@@ -75,7 +77,6 @@ const showData = (data) => {
             cardLikes.append(likesTitle, likesLogos);
             singleCard.append(cardImg, cardLikes);
             cardCont.append(singleCard);
-            break;
           }
         }
       }
