@@ -14,9 +14,8 @@ async function ipData() {
     methodObj
   );
   let res = await data.json();
-  
 
-    showData(res.data);
+  showData(res.data);
 }
 
 document.getElementById("search-btn").addEventListener("click", () => {
@@ -54,6 +53,7 @@ const showData = (data) => {
         for (let i = 0; i < arr.length; i++) {
           if (arr[i].type === "image/png" || arr[i].type === "image/jpeg") {
             let cardCont = document.getElementById("cardsDivCont");
+            cardCont.innerHTML = null;
             let singleCard = document.createElement("div");
             singleCard.setAttribute("class", "singleCard");
             let cardImg = document.createElement("div");
