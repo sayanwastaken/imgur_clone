@@ -41,11 +41,17 @@ const showData = (data) => {
             cardLikes.setAttribute("class", "cardLikes");
             let likesTitle = document.createElement("div");
             likesTitle.setAttribute("class", "likesTitle");
+            let h3= document.createElement("h5");
+            likesTitle.style.textAlign="center"
+            likesTitle.append(h3)
+            h3.innerText=elem.title
+            h3.style.marginTop="10px"
             let likesLogos = document.createElement("div");
             likesLogos.setAttribute("class", "likesLogos");
             cardLikes.append(likesTitle, likesLogos);
             singleCard.append(cardImg, cardLikes);
             cardCont.append(singleCard);
+            break;
           }
         }
       }
