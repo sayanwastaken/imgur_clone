@@ -18,6 +18,12 @@ async function ipData() {
   showData(res.data);
 }
 
+document.getElementById("searchInput").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    ipData();
+  }
+});
+
 document.getElementById("search-btn").addEventListener("click", () => {
   ipData();
 });
@@ -39,14 +45,13 @@ const getData = async () => {
   );
   let res = await data.json();
   // console.log(res.data[0].images[0].gifv)
-  
 
   showData(res.data);
 };
 getData();
 
 const showData = (data) => {
-    let cardCont = document.getElementById("cardsDivCont");
+  let cardCont = document.getElementById("cardsDivCont");
   cardCont.innerHTML = "";
   data.map((elem) => {
     if (elem.images) {
