@@ -265,7 +265,14 @@ body{
     border-image: linear-gradient(45deg, rgb(134, 42, 209) , rgb(35, 132, 211));
     border-image-slice: 1;
     height: 250px;
+    cursor: pointer;
+    transition: all 500ms linear;
 }
+
+.cardImg>img:hover{
+    transform: scale(1.05);
+}
+
 .cardImg{
     height: 70%;
     width: 100%;
